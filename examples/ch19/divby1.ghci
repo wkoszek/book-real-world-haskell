@@ -1,0 +1,6 @@
+:l divby1.hs
+--# ex1
+divBy 50 [1,2,5,8,10]
+take 5 (divBy 100 [1..])
+--# ex2
+divBy 50 [1,2,0,8,10]

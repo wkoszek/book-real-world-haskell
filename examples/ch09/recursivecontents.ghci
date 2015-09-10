@@ -1,0 +1,10 @@
+--# forM
+:m +Control.Monad
+
+:type mapM
+:type forM
+
+--# doesDirectoryExist
+:m +System.Directory
+
+:type doesDirectoryExist

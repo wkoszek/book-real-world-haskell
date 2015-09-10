@@ -1,0 +1,5 @@
+:load QC-basics.hs
+quickCheck (prop_minimum :: [Integer] -> Bool)
+
+--# relatives_wrong1
+quickCheck (prop_minimum :: [Integer] -> Bool)

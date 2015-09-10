@@ -1,0 +1,11 @@
+--# s1
+:l csv1.hs
+parseCSV ""
+--# s2
+parseCSV "hi"
+--# s3
+parseCSV "hi\n"
+parseCSV "line1\nline2\nline3\n"
+parseCSV "cell1,cell2,cell3\n"
+parseCSV "l1c1,l1c2\nl2c1,l2c2\n"
+parseCSV "Hi,\n\n,Hello\n"

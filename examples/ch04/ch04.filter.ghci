@@ -1,0 +1,8 @@
+:load Filter.hs
+
+--# oddList
+oddList [1,1,2,3,5,8,13,21,34]
+
+--# filter
+:type filter
+filter odd [3,1,4,1,5,9,2,6,5]

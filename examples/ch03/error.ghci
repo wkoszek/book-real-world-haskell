@@ -1,0 +1,20 @@
+:load MySecond.hs
+
+--# mySecond
+
+mySecond "xi"
+mySecond [2]
+head (mySecond [[9]])
+
+--# myError
+mySecond []
+
+--# error
+
+error "an error message"
+
+--# safeSecond
+safeSecond []
+safeSecond [1]
+safeSecond [1,2]
+safeSecond [1,2,3]

@@ -1,0 +1,11 @@
+:l safetail.hs
+--# ex1
+tail [1,2,3,4,5]
+safeTail [1,2,3,4,5]
+tail []
+safeTail []
+--# ex2
+take 5 (tail [1..])
+case safeTail [1..] of {Nothing -> Nothing; Just x -> Just (take 5 x)}
+take 5 (tail [])
+case safeTail [] of {Nothing -> Nothing; Just x -> Just (take 5 x)}

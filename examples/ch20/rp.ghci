@@ -1,0 +1,13 @@
+--# shell 
+:load RunProcess.hs
+runIO $ ("ls", ["/etc"]) -|- ("grep", ["m.*ap"]) -|- ("tr", ["a-z", "A-Z"])
+runIO $ "ls /etc" -|- "grep 'm.*ap'" -|- "tr a-z A-Z"
+
+--# hask
+runIO $ "ls /etc" -|- grep "m.*ap" -|- "tr a-z A-Z"
+run $ "ls /etc" -|- grep "m.*ap" -|- "tr a-z A-Z" :: IO String
+run $ "ls /etc" -|- grep "m.*ap" -|- "tr a-z A-Z" :: IO [String]
+run $ "ls /nonexistant" :: IO String
+run $ "ls /nonexistant" :: IO ProcessStatus
+run $ "ls /nonexistant" :: IO Int
+runIO $ echo "Line1\nHi, test\n" -|- "tr a-z A-Z" -|- sortLines

@@ -1,0 +1,66 @@
+--# setup
+:module Database.HDBC Database.HDBC.Sqlite3
+conn <- connectSqlite3 "test1.db"
+run conn "CREATE TABLE test (id INTEGER NOT NULL, desc VARCHAR(80))" []
+run conn "INSERT INTO test (id) VALUES (0)" []
+commit conn
+disconnect conn
+
+--# runargs
+conn <- connectSqlite3 "test1.db"
+run conn "INSERT INTO test VALUES (?, ?)" [toSql 0, toSql "zero"]
+commit conn
+disconnect conn
+
+--# mult
+conn <- connectSqlite3 "test1.db"
+stmt <- prepare conn "INSERT INTO test VALUES (?, ?)"
+execute stmt [toSql 1, toSql "one"]
+execute stmt [toSql 2, toSql "two"]
+execute stmt [toSql 3, toSql "three"]
+execute stmt [toSql 4, SqlNull]
+commit conn
+disconnect conn
+
+--# executeMany
+conn <- connectSqlite3 "test1.db"
+stmt <- prepare conn "INSERT INTO test VALUES (?, ?)"
+executeMany stmt [[toSql 5, toSql "five's nice"], [toSql 6, SqlNull]]
+commit conn
+disconnect conn
+
+--# qqp
+conn <- connectSqlite3 "test1.db"
+quickQuery' conn "SELECT * from test where id < 2" []
+disconnect conn
+
+--# far
+conn <- connectSqlite3 "test1.db"
+stmt <- prepare conn "SELECT * from test where id < 2"
+execute stmt []
+results <- fetchAllRowsAL stmt
+mapM_ print results
+disconnect conn
+
+--# queryhs
+:load query.hs
+query 2
+
+--# metadata
+conn <- connectSqlite3 "test1.db"
+getTables conn
+proxiedClientName conn
+dbServerVer conn
+dbTransactionSupport conn
+disconnect conn
+
+--# error1
+conn <- connectSqlite3 "test1.db"
+quickQuery' conn "SELECT * from test2" []
+disconnect conn
+
+--# error2
+conn <- connectSqlite3 "test1.db"
+handleSqlError $ quickQuery' conn "SELECT * from test2" []
+disconnect conn
+

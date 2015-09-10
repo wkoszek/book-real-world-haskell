@@ -1,0 +1,19 @@
+--# conv
+:module System.Time
+now <- getClockTime
+nowCal <- toCalendarTime now
+let nowUTC = toUTCTime now
+nowCal
+nowUTC
+--# mod
+nowCal {ctYear = 1960}
+(\(TOD sec _) -> sec) (toClockTime nowCal)
+(\(TOD sec _) -> sec) (toClockTime (nowCal {ctYear = 1960}))
+
+--# create
+let newCT = CalendarTime 2010 January 15 12 30 0 0 Sunday 0 "UTC" 0 False
+newCT
+(\(TOD sec _) -> sec) (toClockTime newCT)
+
+--# norm
+toUTCTime . toClockTime $ newCT

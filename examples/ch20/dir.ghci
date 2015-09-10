@@ -1,0 +1,15 @@
+--# setdir
+:module System.Directory
+setCurrentDirectory "/etc"
+getCurrentDirectory
+setCurrentDirectory ".."
+getCurrentDirectory
+--# contents
+getDirectoryContents "/"
+--# contents2
+getDirectoryContents "/" >>= return . filter (`notElem` [".", ".."])
+--# query
+getHomeDirectory
+getAppUserDataDirectory "myApp"
+getUserDocumentsDirectory
+

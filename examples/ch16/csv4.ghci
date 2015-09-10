@@ -1,0 +1,5 @@
+--# s1
+:m Text.ParserCombinators.Parsec
+let eol = string "\n\r" <|> string "\n"
+parse (eol >> eof) "" "\n\r"
+parse (eol >> eof) "" "\n"

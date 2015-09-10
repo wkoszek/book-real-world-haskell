@@ -1,0 +1,44 @@
+--# lines
+
+:type lines
+lines "line 1\nline 2"
+lines "foo\n\nbar\n"
+
+--# lines.cr
+
+lines "a\r\nb"
+
+--# break
+
+break odd [2,4,5,6,8]
+:module +Data.Char
+break isUpper "isUpper"
+
+--# splitLines
+
+:load SplitLines
+splitLines "foo\r\nbar\n"
+
+--# splitLines.foo
+
+splitLines "foo"
+
+--# break.foo
+
+break isLineTerminator "foo"
+
+--# splitLines.foobar
+
+splitLines "foo\r\nbar"
+
+--# break.foobar
+
+break isLineTerminator "foo\r\nbar"
+
+--# splitLines.bar
+
+splitLines "bar"
+
+--# cons
+
+"foo" : ["bar"]

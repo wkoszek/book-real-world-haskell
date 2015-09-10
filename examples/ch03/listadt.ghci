@@ -1,0 +1,16 @@
+:load ListADT
+
+--# empty
+Nil
+
+--# tiny
+Cons 0 Nil
+
+--# two
+Cons 1 it
+Cons 2 it
+Cons 3 it
+
+--# fromList
+fromList "durian"
+fromList [Just True, Nothing, Just False]

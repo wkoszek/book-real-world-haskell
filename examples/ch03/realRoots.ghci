@@ -1,0 +1,12 @@
+--# a0
+
+:load Roots
+realRoots 0 1 2
+
+--# complex
+
+realRoots 1 3 4
+
+--# just
+
+realRoots 1 3 2

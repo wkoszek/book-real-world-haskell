@@ -1,0 +1,5 @@
+:load QC.hs
+generate 10 (System.Random.mkStdGen 2) arbitrary :: [Doc]
+
+--# arbitrarydoc
+generate 10 (System.Random.mkStdGen 2) arbitrary :: [Doc]

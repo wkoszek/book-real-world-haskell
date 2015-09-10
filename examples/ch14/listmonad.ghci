@@ -1,0 +1,16 @@
+--# map
+:type (>>=)
+:type map
+
+--# flipMap
+:type (>>=)
+:type flip map
+
+--# flipMapApp
+flip map [1,2,3] (\a -> [a,a+100])
+
+--# concat
+:type concat
+
+--# bind
+:type \xs f -> concat (map f xs)

@@ -1,0 +1,10 @@
+:load IntParse
+
+--# example
+
+asInt "33"
+
+--# bad
+
+asInt ""
+asInt "potato"

@@ -1,0 +1,5 @@
+:load QC.hs
+quickCheck prop_punctuate'
+
+--# prop_punctuate
+quickCheck prop_punctuate'

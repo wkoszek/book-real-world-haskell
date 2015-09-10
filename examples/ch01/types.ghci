@@ -1,0 +1,47 @@
+--# set_t_on
+
+:set +t
+'c'
+"foo"
+
+--# it
+
+"foo"
+it ++ "bar"
+
+--# it.bad
+
+it
+it ++ 3
+it
+it ++ "baz"
+
+--# integer
+
+7 ^ 80
+
+--# ratio
+
+:m +Data.Ratio
+11 % 29
+
+--# ratio.bad
+
+3.14 % 8
+1.2 % 3.4
+
+--# set_t_off
+
+:unset +t
+2
+
+--# type
+
+:type 'a'
+"foo"
+:type it
+
+--# different
+3 + 2
+:type it
+:type 3 + 2

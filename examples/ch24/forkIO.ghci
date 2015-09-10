@@ -1,0 +1,11 @@
+:m +System.Directory
+catch (removeFile "xyzzy") (const $ return ())
+
+--# forkIO
+:m +Control.Concurrent
+:t forkIO
+:m +System.Directory
+forkIO (writeFile "xyzzy" "seo craic nua!") >> doesFileExist "xyzzy"
+
+--# threadDelay
+:t threadDelay

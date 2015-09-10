@@ -1,0 +1,12 @@
+--# listcomp
+[ (a,b) | a <- [1,2], b <- "abc" ]
+
+--# evens
+[ (a,b) | a <- [1..6], b <- [5..7], even (a + b ^ 2) ]
+
+--# vowels
+let vowel = (`elem` "aeiou")
+[ x | a <- "etaoin", b <- "shrdlu", let x = [a,b], all vowel x ]
+
+--# pattern
+[ a | (3,a) <- [(1,'y'),(3,'e'),(5,'p')] ]

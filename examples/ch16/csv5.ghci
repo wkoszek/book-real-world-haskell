@@ -1,0 +1,4 @@
+--# s1
+:l csv5.hs
+parse (eol >> eof) "" "\n\r"
+parse (eol >> eof) "" "\n"

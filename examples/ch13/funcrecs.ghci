@@ -1,0 +1,9 @@
+--# all
+:l funcrecs.hs
+:t plus5
+name plus5
+:t colorCalc plus5
+(colorCalc plus5) 7
+:t colorCalc always0
+(colorCalc always0) 7
+

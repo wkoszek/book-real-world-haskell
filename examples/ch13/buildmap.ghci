@@ -1,0 +1,6 @@
+--# all
+:l buildmap.hs
+al
+mapFromAL
+mapFold
+mapManual

@@ -1,0 +1,10 @@
+:load colorderived.hs
+--# all
+show Red
+(read "Red")::Color
+(read "[Red,Red,Blue]")::[Color]
+(read "[Red, Red, Blue]")::[Color]
+Red == Red
+Red == Blue
+Data.List.sort [Blue,Green,Blue,Red]
+Red < Blue

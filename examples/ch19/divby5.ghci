@@ -1,0 +1,11 @@
+--# ex1
+:l divby5.hs
+divBy 50 [1,2,5,8,10]
+(divByGeneric 50 [1,2,5,8,10])::(Integral a => Maybe [a])
+divByGeneric 50 [1,2,5,8,10]
+divByGeneric 50 [1,2,0,8,10]
+--# ex2
+:m +Control.Monad.Error
+(divByGeneric 50 [1,2,5,8,10])::(Integral a => Either String [a])
+(divByGeneric 50 [1,2,0,8,10])::(Integral a => Either String [a])
+

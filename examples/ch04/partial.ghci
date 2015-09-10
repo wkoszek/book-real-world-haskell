@@ -1,0 +1,22 @@
+:load Partial
+
+--# isInfixOf
+:type isInfixOf
+:type isInfixOf "foo"
+
+--# section
+(1+) 2
+map (*3) [24,36]
+map (2^) [3,5,7,9]
+
+--# function
+
+:type (`elem` ['a'..'z'])
+
+--# lower.letter
+
+(`elem` ['a'..'z']) 'f'
+
+--# lower.string
+
+all (`elem` ['a'..'z']) "Frobozz"

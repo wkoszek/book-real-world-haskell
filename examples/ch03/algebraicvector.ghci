@@ -1,0 +1,7 @@
+:load AlgebraicVector
+
+--# typed
+Cartesian2D (sqrt 2) (sqrt 2) == Polar2D (pi / 4) 2
+
+--# tupled
+(1, 2) == (1, 2)

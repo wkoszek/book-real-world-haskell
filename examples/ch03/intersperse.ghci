@@ -1,0 +1,5 @@
+--# intersperse
+:load Intersperse
+intersperse ',' []
+intersperse ',' ["foo"]
+intersperse ',' ["foo","bar","baz","quux"]

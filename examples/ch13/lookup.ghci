@@ -1,0 +1,4 @@
+--# lookup1
+let al = [(1, "one"), (2, "two"), (3, "three"), (4, "four")]
+lookup 1 al
+lookup 5 al

@@ -1,0 +1,10 @@
+-- snippet bogus
+Build-Depends: base >= 2.0 && < 2.2
+Build-Depends: base >= 3.0, array
+-- /snippet bogus
+
+-- snippet modern
+-- in base 1.0 and 3.0, bytestring is a separate package
+Build-Depends: base < 2.0 || >= 3, bytestring >= 0.9
+Build-Depends: base >= 3.0, array
+-- /snippet modern

@@ -1,0 +1,14 @@
+:m +System.Random
+
+--# getStdRandom
+:type getStdRandom
+
+--# random
+:load RandomSupply
+(fst . runSupply next) `fmap` randomsIO
+(fst . runSupply next) `fmap` randomsIO
+
+--# first
+:m +Control.Arrow
+first (+3) (1,2)
+second odd ('a',1)

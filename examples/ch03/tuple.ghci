@@ -1,0 +1,24 @@
+--# book
+(1964, "Labyrinths")
+
+--# tuple
+:type (True, "hello")
+(4, ['a', 'm'], (16, True))
+
+--# type1
+:type (False, 'a')
+:type ('a', False)
+
+--# type2
+:type (False, 'a', 'b')
+
+--# complicated
+:load Tuple.hs
+complicated (True, 1, [1,2,3], 5)
+
+--# nomatch
+complicated (False, 1, [1,2,3], 5)
+
+--# fst
+fst (1,'a')
+snd (1,'a')

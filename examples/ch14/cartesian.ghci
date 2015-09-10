@@ -1,0 +1,9 @@
+:load CartesianProduct
+
+--# comparison
+comprehensive [1,2] "bar"
+comprehensive [1,2] "bar" == monadic [1,2] "bar"
+
+--# rbind
+:type (>>=)
+:type (=<<)

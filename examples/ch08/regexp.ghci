@@ -1,0 +1,87 @@
+--# load
+
+:module +Text.Regex.Posix
+
+--# typetwiddle
+
+:type (=~)
+
+--# noreturn
+
+"my left foot" =~ "foo"
+
+--# bool.passfail
+
+"my left foot" =~ "foo" :: Bool
+
+"your right hand" =~ "bar" :: Bool
+
+"your right hand" =~ "(hand|foot)" :: Bool
+
+--# int.count
+
+"a star called henry" =~ "planet" :: Int
+
+"honorificabilitudinitatibus" =~ "[aeiou]" :: Int
+
+--# string
+
+"I, B. Ionsonii, uurit a lift'd batch" =~ "(uu|ii)" :: String
+
+"hi ludi, F. Baconis nati, tuiti orbi" =~ "Shakespeare" :: String
+
+--# list.string
+
+"I, B. Ionsonii, uurit a lift'd batch" =~ "(uu|ii)" :: [String]
+
+"hi ludi, F. Baconis nati, tuiti orbi" =~ "Shakespeare" :: [String]
+
+--# let
+
+let pat = "(foo[a-z]*bar|quux)"
+
+--# 3tuple.match
+
+"before foodiebar after" =~ pat :: (String,String,String)
+
+--# 3tuple.nomatch
+
+"no match here" =~ pat :: (String,String,String)
+
+--# 4tuple
+
+"before foodiebar after" =~ pat :: (String,String,String,[String])
+
+--# 2tuple.match
+
+"before foodiebar after" =~ pat :: (Int,Int)
+"i foobarbar a quux" =~ pat :: [(Int,Int)]
+
+--# 2tuple.nomatch
+
+"eleemosynary" =~ pat :: (Int,Int)
+"mondegreen" =~ pat :: [(Int,Int)]
+
+--# mix.pack
+
+:module +Data.ByteString.Char8
+
+:type pack "foo"
+
+--# mix.simple
+
+pack "foo" =~ "bar" :: Bool
+"foo" =~ pack "bar" :: Int
+pack "foo" =~ pack "o" :: [(Int, Int)]
+
+--# mix.match
+
+pack "good food" =~ ".ood" :: [ByteString]
+
+--# mix.nomatch
+
+"good food" =~ ".ood" :: [ByteString]
+
+--# mix.rematch
+
+"good food" =~ ".ood" :: [String]

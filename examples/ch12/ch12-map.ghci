@@ -1,0 +1,42 @@
+:set -i../ch11 -i../ch10
+
+:load Barcode
+
+--# create
+
+M.empty
+M.singleton "foo" True
+
+--# lookup.type
+
+:type M.lookup
+
+--# lookup
+
+let m = M.singleton "foo" 1 :: M.Map String Int
+case M.lookup "bar" m of { Just v -> "yay"; Nothing -> "boo" }
+
+--# lookupWithDefault
+
+:type M.findWithDefault
+M.findWithDefault 9999 "bar" m
+
+--# insert
+
+:type M.insert
+M.insert "quux" 10 m
+M.insert "foo" 9999 m
+
+--# insertWith
+
+:type M.insertWith'
+M.insertWith' (+) "zippity" 10 m
+M.insertWith' (+) "foo" 9999 m
+
+--# delete
+:type M.delete
+M.delete "foo" m
+
+--# union
+m `M.union` M.singleton "quux" 1
+m `M.union` M.singleton "foo" 0

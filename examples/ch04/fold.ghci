@@ -1,0 +1,10 @@
+:load Fold.hs
+
+--# identity
+identity [1,2,3]
+
+--# append.builtin
+[1,2,3] ++ [4,5,6]
+
+--# append
+append [1,2,3] [4,5,6]

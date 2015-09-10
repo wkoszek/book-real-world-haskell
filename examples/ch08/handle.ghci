@@ -1,0 +1,13 @@
+--# type.handle
+
+:module +Control.Exception
+:type handle
+
+--# type.const
+
+:type const
+
+:type return []
+
+:type handle (const (return []))
+

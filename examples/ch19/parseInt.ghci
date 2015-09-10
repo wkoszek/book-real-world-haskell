@@ -1,0 +1,13 @@
+:load ParseInt
+
+--# test
+:m +Data.Char
+let p = satisfy isDigit
+runParser p (B.pack "x")
+runParser p (B.pack "9abc")
+runParser (optional p) (B.pack "x")
+runParser (optional p) (B.pack "9a")
+
+--# runErrorT
+:t runErrorT
+

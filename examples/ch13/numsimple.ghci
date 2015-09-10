@@ -1,0 +1,8 @@
+--# all
+:l numsimple.hs
+Number 5
+:t Number 5
+:t Number (5::Int)
+Number 5 * Number 10
+(5 * 10)::SymbolicManip Int
+(5 * 10 + 2)::SymbolicManip Int

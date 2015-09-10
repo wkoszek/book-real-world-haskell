@@ -1,0 +1,5 @@
+--# all
+:load toupper-lazy1.hs
+processData "Hello, there!  How are you?"
+:type processData
+:type processData "Hello!"

@@ -1,0 +1,3 @@
+--# all
+:module System.Directory
+getModificationTime "/etc/passwd"

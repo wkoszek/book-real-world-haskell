@@ -1,0 +1,3 @@
+--# add
+:load add.hs
+add 1 2

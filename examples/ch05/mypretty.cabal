@@ -1,0 +1,32 @@
+-- snippet begin
+Name:          mypretty
+Version:       0.1
+
+-- This is a comment.  It stretches to the end of the line.
+-- /snippet begin
+
+-- snippet human
+Synopsis:      My pretty printing library, with JSON support
+Description:
+  A simple pretty printing library that illustrates how to
+  develop a Haskell library.
+Author:        Real World Haskell
+Maintainer:    nobody@realworldhaskell.org
+-- /snippet human
+
+-- snippet license
+License:       BSD3
+License-File:  LICENSE
+-- /snippet license
+
+-- snippet version
+Cabal-Version: >= 1.2
+-- /snippet version
+
+-- snippet library
+library
+  Exposed-Modules: Prettify
+                   PrettyJSON
+                   SimpleJSON
+  Build-Depends:   base >= 2.0
+-- /snippet library

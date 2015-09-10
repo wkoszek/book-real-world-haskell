@@ -1,0 +1,25 @@
+:load Newtype
+
+--# compare
+N 1 < N 2
+
+--# num
+N 313 + N 37
+
+--# undefined
+undefined
+
+--# D
+case D undefined of D _ -> 1
+
+--# data
+case undefined of D _ -> 1
+
+--# N
+case N undefined of N _ -> 1
+
+--# newtype
+case undefined of N _ -> 1
+
+--# unique
+UniqueID 314159265

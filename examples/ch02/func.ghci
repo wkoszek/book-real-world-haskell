@@ -1,0 +1,73 @@
+--# head
+
+head [1,2,3,4]
+head ['a','b','c']
+
+--# tail
+
+tail [1,2,3,4]
+tail [2,3,4]
+tail [True,False]
+tail "list"
+tail []
+
+--# takeDrop
+
+take 2 [1,2,3,4,5]
+drop 3 [1,2,3,4,5]
+
+--# lines.type
+
+:type lines
+
+--# lines
+
+lines "the quick\nbrown fox\njumps"
+
+--# take.type
+
+:type take
+
+--# headDrop
+
+head (drop 4 "azerty")
+
+--# last
+
+last [1,2,3,4,5]
+last "baz"
+
+--# last.type
+
+:type last
+
+--# not.type
+
+:type not
+
+--# fst.type
+
+:type fst
+
+--# odd
+
+odd 3
+odd 6
+
+--# compare
+
+compare 2 3
+compare 3 3
+compare 3 2
+
+--# precedence
+
+(compare 2 3) == LT
+compare 2 3 == LT
+
+--# precedence2
+
+compare (sqrt 3) (sqrt 6)
+
+--# precedence3
+compare sqrt 3 sqrt 6

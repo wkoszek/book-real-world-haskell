@@ -1,0 +1,11 @@
+:load insert
+--# insert1
+let al = [(1, "one"), (2, "two"), (3, "three"), (4, "four")]
+insert 5 "five" al
+insert 2 "TWO" al
+insert 1 "one" []
+--# insert2
+insert 3 "three" . insert 2 "two" . insert 1 "one" $ []
+--# insert3
+foldl (\list (k, v) -> insert k v list) [] [(1, "one"), (2, "two"), (1, "ONE")]
+

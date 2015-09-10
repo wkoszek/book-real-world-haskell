@@ -1,0 +1,11 @@
+-- ch24/pod.cabal
+Name: pod
+Version: 1.0.0
+Build-type: Simple
+Build-Depends: HTTP, HaXml, network, HDBC, HDBC-sqlite3, base, 
+               gtk, glade
+Data-files: podresources.glade
+
+Executable: pod
+Main-Is: PodCabalMain.hs
+GHC-Options: -O2

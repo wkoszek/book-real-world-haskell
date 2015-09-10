@@ -1,0 +1,24 @@
+:load DataSequence
+--# simple
+Seq.empty
+Seq.singleton 1
+
+--# list
+let a = Seq.fromList [1,2,3]
+
+--# ugly
+1 Seq.<| Seq.singleton 2
+
+--# nice
+Seq.singleton 1 |> 2
+
+--# append
+let left = Seq.fromList [1,3,3]
+let right = Seq.fromList [7,1]
+left >< right
+
+--# toList
+Foldable.toList (Seq.fromList [1,2,3])
+
+--# foldl
+Foldable.foldl' (+) 0 (Seq.fromList [1,2,3])

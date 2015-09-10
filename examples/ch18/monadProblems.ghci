@@ -1,0 +1,9 @@
+:m +Control.Monad
+
+--# filter
+:t filter
+:i filterM
+
+--# zip
+:t zip
+:i zipM

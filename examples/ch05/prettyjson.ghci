@@ -1,0 +1,29 @@
+:load PrettyJSON
+
+--# simpleEscapes
+take 4 simpleEscapes
+
+--# showHex
+showHex 114111 ""
+
+--# replicate
+
+replicate 5 "foo"
+
+--# bits
+0x10000 `shiftR` 4   :: Int
+7 .&. 2   :: Int
+
+--# compact
+let value = renderJValue (JObject [("f", JNumber 1), ("q", JBool True)])
+:type value
+putStrLn (compact value)
+
+--# foo
+char 'f' <> text "oo"
+compact (char 'f' <> text "oo")
+
+--# pretty
+putStrLn (pretty 10 value)
+putStrLn (pretty 20 value)
+putStrLn (pretty 30 value)

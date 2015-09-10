@@ -1,0 +1,9 @@
+--# getClockTime
+:module System.Time
+getClockTime
+--# ClockTime2
+TOD 1000 0
+getClockTime >>= (\(TOD sec _) -> return sec)
+--# ClockTime3
+getClockTime >>= (\(TOD sec _) -> return (TOD (sec + 86400) 0))
+

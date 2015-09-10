@@ -1,0 +1,3 @@
+let tryBogusSale = error "inconsistent global balance"
+--# bogus
+tryBogusSale

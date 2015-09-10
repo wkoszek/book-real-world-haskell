@@ -1,0 +1,64 @@
+--# load
+:load BookStore
+
+--# myInfo
+myInfo
+:type myInfo
+
+--# newValue
+
+Book 0 "The Book of Imaginary Beings" ["Jorge Luis Borges"]
+
+--# newVar
+
+let cities = Book 173 "Use of Weapons" ["Iain M. Banks"]
+
+--# valueType
+
+:type Book 1 "Cosmicomics" ["Italo Calvino"]
+
+--# info
+
+:info BookInfo
+
+--# type
+
+:type Book
+
+--# tuple
+
+Book 2 "The Wealth of Networks" ["Yochai Benkler"]
+(2, "The Wealth of Networks", ["Yochai Benkler"])
+
+--# unwrap
+
+bookID (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+bookTitle (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+bookAuthors (Book 3 "Probability Theory" ["E.T.H. Jaynes"])
+
+--# unwrap.types
+
+:type bookID
+:type bookTitle
+:type bookAuthors
+
+--# customer1
+customer1
+
+--# cities
+cities
+
+--# accessor.type
+:type customerID
+
+--# accessor
+:type customerName
+customerName customer1
+
+--# billingInfo
+
+:type CreditCard
+CreditCard "2901650221064486" "Thomas Gradgrind" ["Dickens", "England"]
+:type it
+Invoice
+:type it

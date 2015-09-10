@@ -1,0 +1,5 @@
+--# flipMap
+:m +Control.Monad
+:t mapM
+:t forM
+:t flip mapM

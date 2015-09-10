@@ -1,0 +1,3 @@
+--# all
+:type readFile
+:type writeFile

@@ -1,0 +1,32 @@
+--# parse
+:load Parse
+:type parse (identity 1) undefined
+parse (identity 1) undefined
+parse (identity "foo") undefined
+
+--# uncons
+L8.uncons (L8.pack "foo")
+L8.uncons L8.empty
+
+--# id.fail
+
+parse parseByte L.empty
+parse (id <$> parseByte) L.empty
+
+--# id.success
+
+let input = L8.pack "foo"
+L.head input
+parse parseByte input
+parse (id <$> parseByte) input
+
+--# compose
+
+parse ((chr . fromIntegral) <$> parseByte) input
+parse (chr <$> fromIntegral <$> parseByte) input
+
+--# modifyOffset
+let before = ParseState (L8.pack "foo") 0
+let after = modifyOffset before 3
+before
+after

@@ -1,0 +1,49 @@
+--# takeExtension
+
+:m +System.FilePath
+
+:type takeExtension
+takeExtension "foo/bar.c"
+takeExtension "quux"
+
+--# find.c
+
+:load SimpleFinder
+:type simpleFind (\p -> takeExtension p == ".c")
+
+--# System.Directory
+
+:m +System.Directory
+
+--# doesExist
+
+:type doesFileExist
+doesFileExist "."
+
+:type doesDirectoryExist
+doesDirectoryExist "."
+
+--# getPermissions
+
+:type getPermissions
+:info Permissions
+getPermissions "."
+:type searchable
+searchable it
+
+--# getModificationTime
+
+:type getModificationTime
+getModificationTime "."
+
+--# filterM
+
+:m +Control.Monad
+:type filterM
+
+--# handle
+:m +Control.Exception
+:type handle
+
+--# bracket
+:type bracket

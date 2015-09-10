@@ -1,0 +1,32 @@
+--# empty
+
+[]
+
+--# cons
+
+1 : []
+1 : [2]
+
+--# cons2
+
+"alpha" : "beta" : ["gamma", "delta"]
+
+--# cons.bad
+
+True : False
+True : ["wrong"]
+
+--# listlist
+
+[["foo", "bar"], ["x", "y"]]
+
+--# append
+
+:type (++)
+[2,3] ++ [4,5]
+"joining " ++ " lists " ++ " together"
+
+--# concat
+
+:type concat
+concat [[1,1,2], [3,5,8], [11]]

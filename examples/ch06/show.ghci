@@ -1,0 +1,21 @@
+--# showtype
+:type show
+--# showex
+show 1
+show [1, 2, 3]
+show (1, 2)
+--# printshowex
+putStrLn (show 1)
+putStrLn (show [1,2,3])
+--# showstr
+show "Hello!"
+putStrLn (show "Hello!")
+show ['H', 'i']
+putStrLn (show "Hi")
+show "Hi, \"Jane\""
+putStrLn (show "Hi, \"Jane\"")
+--# junk
+:load eqclasses.hs
+--# color
+show Red
+

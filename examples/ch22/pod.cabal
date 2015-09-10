@@ -1,0 +1,9 @@
+-- ch23/pod.cabal
+Name: pod
+Version: 1.0.0
+Build-type: Simple
+Build-Depends: HTTP, HaXml, network, HDBC, HDBC-sqlite3, base
+
+Executable: pod
+Main-Is: PodMain.hs
+GHC-Options: -O2

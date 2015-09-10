@@ -1,0 +1,8 @@
+--# HandleIO
+:load HandleIO
+runHandleIO (safeHello "hello_world_101.txt")
+:m +System.Directory
+removeFile "hello_world_101.txt"
+
+--# bad
+runHandleIO (safeHello "goodbye" >> removeFile "goodbye")

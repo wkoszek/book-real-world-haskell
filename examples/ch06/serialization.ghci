@@ -1,0 +1,16 @@
+--# ex1
+let d1 = [Just 5, Nothing, Nothing, Just 8, Just 9]::[Maybe Int]
+putStrLn (show d1)
+writeFile "test" (show d1)
+--# ex2
+input <- readFile "test"
+let d2 = read input
+let d2 = (read input)::[Maybe Int]
+print d1
+print d2
+d1 == d2
+--# ex3
+putStrLn $ show [("hi", 1), ("there", 3)]
+putStrLn $ show [[1, 2, 3], [], [4, 0, 1], [], [503]]
+putStrLn $ show [Left 5, Right "three", Left 0, Right "nine"]
+putStrLn $ show [Left 0, Right [1, 2, 3], Left 5, Right []]

@@ -1,0 +1,46 @@
+:set -i../ch10
+
+:load Barcode
+
+--# group
+group [1,1,2,3,3,3,3]
+
+--# runLength
+let bits = [0,0,1,1,0,0,1,1,0,0,0,0,0,0,1,1,1,1,0,0,0,0]
+runLength bits
+
+--# runLengths
+runLengths bits
+
+--# distance
+let group = scaleToOne [2,6,4,4]
+
+distance group (head leftEvenSRL)
+distance group (head leftOddSRL)
+
+--# verbosity
+
+show $ Even 1
+show $ AltEven 1
+length . show $ Even 1
+length . show $ AltEven 1
+
+--# candidateDigits
+
+:type input
+take 7 input
+mapM_ print $ candidateDigits input
+
+--# combinations
+product . map length . candidateDigits $ input
+
+--# useDigit
+let single n = M.singleton n [Even n] :: ParityMap
+useDigit (single 1) M.empty (Even 1)
+useDigit (single 1) (single 2) (Even 2)
+
+--# incorporateDigits
+incorporateDigits (M.singleton 0 []) [Even 1, Even 5]
+
+--# solve
+listToMaybe . solve . candidateDigits $ input

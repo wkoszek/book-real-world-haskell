@@ -1,0 +1,7 @@
+--# e1
+:l dynexc.hs
+throwSqlErrorIO "state" 5 "error message"
+handleSqlError $ throwSqlErrorIO "state" 5 "error message"
+handleSqlError $ fail "other error"
+--# e2
+handleSql (fail . seErrorMsg) (throwSqlErrorIO "state" 5 "my error")

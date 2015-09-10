@@ -1,0 +1,11 @@
+--# s1
+:l csv6.hs
+parse (eol >> eof) "" "\n\r"
+parse (eol >> eof) "" "\n"
+parse (eol >> eof) "" "\r\n"
+parse (eol >> eof) "" "\r"
+--# s2
+parseCSV "line1\r\nline2\nline3\n\rline4\rline5\n"
+--# error
+parseCSV "line1"
+

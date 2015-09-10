@@ -1,0 +1,12 @@
+--# all
+:module System.Time
+let feb5 = toClockTime $ CalendarTime 2008 February 5 0 0 0 0 Sunday 0 "UTC" 0 False
+feb5
+addToClockTime (TimeDiff 0 1 0 0 0 0 0) feb5
+toUTCTime $ addToClockTime (TimeDiff 0 1 0 0 0 0 0) feb5
+let jan30 = toClockTime $ CalendarTime 2009 January 30 0 0 0 0 Sunday 0 "UTC" 0 False
+jan30
+addToClockTime (TimeDiff 0 1 0 0 0 0 0) jan30
+toUTCTime $ addToClockTime (TimeDiff 0 1 0 0 0 0 0) jan30
+diffClockTimes jan30 feb5
+normalizeTimeDiff $ diffClockTimes jan30 feb5

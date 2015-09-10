@@ -1,0 +1,61 @@
+-- snippet header
+Name:               rwh-bloomfilter
+Version:            0.1
+License:            BSD3
+License-File:       License.txt
+Category:           Data
+Stability:          experimental
+Build-Type:         Simple
+-- /snippet header
+
+-- snippet extraSourceFiles
+Extra-Source-Files: cbits/lookup3.c cbits/lookup3.h
+-- /snippet extraSourceFiles
+
+-- snippet splitBase
+Cabal-Version:      >= 1.2
+
+Flag split-base
+  Description: Has the base package been split up?
+  Default: True
+
+Flag bytestring-in-base
+  Description: Is ByteString in the base or bytestring package?
+  Default: False
+-- /snippet splitBase
+
+-- snippet library
+Library
+  if flag(bytestring-in-base)
+    -- bytestring was in base-2.0 and 2.1.1
+    Build-Depends: base >= 2.0 && < 2.2
+  else
+    -- in base 1.0 and 3.0, bytestring is a separate package
+    Build-Depends: base < 2.0 || >= 3, bytestring >= 0.9
+
+  if flag(split-base)
+    Build-Depends: base >= 3.0, array
+  else
+    Build-Depends: base < 3.0
+-- /snippet library
+
+-- snippet modules
+  Exposed-Modules: BloomFilter
+                   BloomFilter.Easy
+                   BloomFilter.Hash
+                   BloomFilter.Mutable
+  Other-Modules:   BloomFilter.Internal
+  GHC-Options:     -O2 -Wall -fvia-C -optc-O2
+-- /snippet modules
+
+-- snippet modules
+  GHC-Prof-Options: -auto-all
+-- /snippet modules
+
+-- snippet cbits
+  C-Sources:        cbits/lookup3.c
+  CC-Options:       -O3
+  Include-Dirs:     cbits
+  Includes:         lookup3.h
+  Install-Includes: lookup3.h
+-- /snippet cbits

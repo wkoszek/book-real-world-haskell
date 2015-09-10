@@ -1,0 +1,31 @@
+--# monomorphic
+:load BloomCheck
+:t prop_one_present
+:t prop_one_present (undefined :: Int)   
+
+--# one
+handyCheck 5000 $ prop_one_present (undefined :: Int)
+handyCheck 5000 $ prop_one_present (undefined :: Double)
+
+--# all
+handyCheck 2000 $ prop_all_present (undefined :: Int)
+
+--# bs
+handyCheck 1000 $ prop_one_present (undefined :: Lazy.ByteString)
+handyCheck 1000 $ prop_all_present (undefined :: Strict.ByteString)
+
+--# try1
+handyCheck 1000 $ prop_suggest_try1
+handyCheck 1000 $ prop_suggest_try1
+
+--# why
+B.suggestSizing 1678125842 8.501133057303545e-3
+
+--# try2a
+handyCheck 1000 $ prop_suggest_try2
+
+--# try2b
+handyCheck 10000 $ prop_suggest_try2
+
+--# try3
+handyCheck 40000 $ prop_suggestions_sane

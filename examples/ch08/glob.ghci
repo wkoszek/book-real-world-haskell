@@ -1,0 +1,6 @@
+--# split
+:module +System.FilePath
+splitFileName "foo/bar"
+
+--# tricksy
+splitFileName "foo/"

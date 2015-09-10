@@ -1,0 +1,22 @@
+--# char
+
+'c'
+:type 'c'
+
+--# string
+
+"a string literal"
+:type "a string literal"
+
+--# stringlist
+
+['a', ' ', 's', 't', 'r', 'i', 'n', 'g'] == "a string"
+
+--# empty
+
+"\&"
+"foo\&bar"
+
+--# empty.example
+
+"\130\&11"

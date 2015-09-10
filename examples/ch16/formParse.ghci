@@ -1,0 +1,4 @@
+:load FormParse
+
+--# test
+parseTest p_query "foo=bar&a%21=b+c"

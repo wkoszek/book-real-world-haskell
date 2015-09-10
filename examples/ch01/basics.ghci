@@ -1,0 +1,195 @@
+--# arithmetic
+
+2 + 2
+31337 * 101
+7.0 / 2.0
+
+--# bignum
+
+313 ^ 15
+
+--# neg.simple
+
+-3
+
+--# neg.error
+2 + -3
+
+--# neg.better
+
+2 + (-3)
+3 + (-(13 * 37))
+
+--# whitespace.ok
+
+2*3
+
+--# whitespace.eek
+
+2*-3
+
+--# whitespace.whew
+
+2*(-3)
+
+--# pi
+
+pi
+
+--# e
+
+e
+
+--# let
+
+let e = exp 1
+
+--# epipi
+
+(e ** pi) - pi
+
+--# boolean
+
+True && False
+False || True
+
+--# boolean.bad
+
+True && 1
+
+--# comparison
+
+1 == 1
+2 < 3
+4 >= 3.99
+
+--# neq
+
+2 /= 3
+
+--# not
+
+not True
+
+--# parens
+
+1 + (4 * 4)
+1 + 4 * 4
+
+--# precedence
+
+:info (+)
+:info (*)
+
+--# grouping
+
+5 * 8 / 3
+5 * (8 / 3)
+
+--# module
+
+:module + Data.Ratio
+
+--# denom.bad
+
+22 % 7  *  7 % 22
+
+--# denom.good
+
+(22 % 7)  *  (7 % 22)
+
+--# intpower
+
+12 ^ 2
+12.1 ^ 2
+
+--# exponent.bad
+
+12 ^ 2.1
+
+--# exponent.zero
+
+12 ^ 0
+12 ^ (-1)
+
+--# exponent.neg
+
+12 ^^ (-2)
+0 ^^ (-2)
+
+--# exponent.float
+
+12.2 ** 2.1
+
+--# concat
+
+[3,1,3] ++ [3,7]
+[] ++ [False,True] ++ [True]
+
+--# cons
+
+1 : [2,3]
+1 : []
+
+--# string
+
+"This is a string."
+
+--# newline
+
+putStrLn "Here's a newline -->\n<-- See?"
+
+--# list
+
+[1, 2, 3]
+
+--# list.shortlong
+
+[]
+["foo", "bar", "baz", "quux", "fnord", "xyzzy"]
+
+--# list.bad
+
+[True, False, "testing"]
+
+--# range
+
+[1..10]
+
+--# range.step
+
+[1.0,1.25..2.0]
+[1,4..15]
+[10,9..1]
+
+--# char
+
+'a'
+
+--# range.char
+
+['a','e'..'z']
+
+--# work
+
+let a = ['l', 'o', 't', 's', ' ', 'o', 'f', ' ', 'w', 'o', 'r', 'k']
+a
+a == "lots of work"
+
+--# emptystring
+"" == []
+
+--# newstring
+'a':"bc"
+"foo" ++ "bar"
+
+--# range.double
+
+[1.0..1.8]
+
+--# prefix
+2 + 2
+(+) 2 2
+
+--# caret
+:info (^)

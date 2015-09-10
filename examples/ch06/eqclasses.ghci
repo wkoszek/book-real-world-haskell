@@ -1,0 +1,5 @@
+--# all
+:load eqclasses.hs
+isEqual False False
+isEqual False True
+isEqual "Hi" "Hi"

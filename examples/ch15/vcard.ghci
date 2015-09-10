@@ -1,0 +1,10 @@
+:load VCard
+
+--# simple
+onePersonalPhone twalumba
+onePersonalPhone albulena
+allBusinessPhones nils
+
+--# lookupM
+lookupM Home twalumba :: Maybe Phone
+lookupM Business nils :: [Phone]

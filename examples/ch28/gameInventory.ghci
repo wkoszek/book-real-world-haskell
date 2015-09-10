@@ -1,0 +1,14 @@
+--# transferTest
+:load GameInventory
+atomically transferTest
+
+--# atomically
+:type atomically
+
+--# stm
+:type newTVar
+:type readTVar
+:type writeTVar
+
+--# orElse
+:type orElse

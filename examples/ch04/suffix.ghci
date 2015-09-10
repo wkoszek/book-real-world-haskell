@@ -1,0 +1,48 @@
+:load SuffixTree
+
+--# tails
+:m +Data.List
+tail "foobar"
+tail (tail "foobar")
+tails "foobar"
+
+--# tails.empty
+
+tails []
+
+--# suffixes
+
+tails "foo"
+suffixes "foo"
+
+--# suffixes2
+
+suffixes2 "foo"
+
+--# types
+
+:type (.)
+:type suffixes
+:type suffixes5
+suffixes5 "foo"
+
+--# dotty
+:module +Data.Char
+let capCount = length . filter (isUpper . head) . words
+capCount "Hello there, Mom!"
+
+--# words.type
+:type words
+
+--# capped.type
+:type isUpper . head
+
+--# capfilt.type
+:type filter (isUpper . head)
+
+--# compose1.type
+:type length . filter (isUpper . head)
+
+--# foo
+let foo = sum . map sum . filter (any odd)
+:type foo

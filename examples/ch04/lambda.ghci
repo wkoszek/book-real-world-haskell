@@ -1,0 +1,7 @@
+:load Lambda
+
+--# unsafeHead
+
+:type unsafeHead
+unsafeHead [1]
+unsafeHead []

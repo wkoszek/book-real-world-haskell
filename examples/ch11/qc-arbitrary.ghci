@@ -1,0 +1,5 @@
+:load QC-basics.hs
+generate 10 (System.Random.mkStdGen 2) arbitrary :: [Bool]
+
+--# arbitrary
+generate 10 (System.Random.mkStdGen 2) arbitrary :: [Bool]

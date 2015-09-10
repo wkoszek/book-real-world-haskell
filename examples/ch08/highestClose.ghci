@@ -1,0 +1,17 @@
+--# readFile
+putStr =<< readFile "prices.csv"
+
+--# maximum
+maximum [3,6,2,9]
+maximum []
+
+--# maxList
+maximum [Nothing, Just 1]
+maximum [Nothing]
+
+--# highestClose
+:load HighestClose
+highestCloseFrom "prices.csv"
+
+--# highestEmpty
+highestClose L.empty

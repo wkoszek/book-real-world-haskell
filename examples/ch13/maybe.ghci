@@ -1,0 +1,14 @@
+--# maybe1
+Nothing
+:t Nothing
+Just "hi"
+:t Just "hi"
+Nothing
+:t (Nothing :: Maybe [Char])
+
+--# maybe2
+(Nothing::Maybe Int) == Nothing
+Nothing == Just "hi"
+Nothing == Just 123
+Just "hi" == Just "bye"
+Just "hi" == Just 123

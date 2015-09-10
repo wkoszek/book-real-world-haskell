@@ -1,0 +1,9 @@
+--# shadow
+let x = 1
+let f n = x + n
+x
+let x = "foo"
+x
+
+--# f
+f 2

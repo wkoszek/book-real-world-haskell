@@ -1,0 +1,19 @@
+:m +Control.Concurrent
+
+--# MVar
+:t putMVar
+:t takeMVar
+
+--# new
+:t newEmptyMVar
+:t newMVar
+
+--# communicate
+:load MVarExample
+communicate
+
+--# modifyMVar
+:t modifyMVar
+
+--# tryTakeMVar
+:t tryTakeMVar

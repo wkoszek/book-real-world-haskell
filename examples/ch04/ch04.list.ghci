@@ -1,0 +1,192 @@
+--# null
+
+:type null
+null []
+null "plugh"
+
+--# length
+
+:type length
+length []
+length [1,2,3]
+length "strings are lists, too"
+
+--# head
+
+:type head
+head [1,2,3]
+
+--# tail
+
+:type tail
+tail "foo"
+
+--# last
+
+:type last
+last "bar"
+
+--# init
+
+:type init
+init "bar"
+
+--# head.empty
+
+head []
+
+--# append
+
+:type (++)
+"foo" ++ "bar"
+[] ++ [1,2,3]
+[True] ++ []
+
+--# concat
+
+:type concat
+concat [[1,2,3], [4,5,6]]
+
+--# concat.multi
+
+concat [[[1,2],[3]], [[4],[5],[6]]]
+concat (concat [[[1,2],[3]], [[4],[5],[6]]])
+
+--# reverse
+
+:type reverse
+reverse "foo"
+
+--# and.or
+
+:type and
+and [True,False,True]
+and []
+:type or
+or [False,False,False,True,False]
+or []
+
+--# all.any
+
+:type all
+all odd [1,3,5]
+all odd [3,1,4,1,5,9,2,6,5]
+all odd []
+:type any
+any even [3,1,4,1,5,9,2,6,5]
+any even []
+
+--# take.drop
+
+:type take
+take 3 "foobar"
+take 2 [1]
+:type drop
+drop 3 "xyzzy"
+drop 1 []
+
+--# splitAt
+
+:type splitAt
+
+splitAt 3 "foobar"
+
+--# takeWhile.dropWhile
+
+:type takeWhile
+takeWhile odd [1,3,5,6,8,9,11]
+:type dropWhile
+dropWhile even [2,4,6,7,9,10,12]
+
+--# break.span
+
+:type span
+span even [2,4,6,7,9,10,11]
+:type break
+break even [1,3,5,6,8,9,10]
+
+--# elem
+
+:type elem
+2 `elem` [5,3,2,1,1]
+2 `notElem` [5,3,2,1,1]
+
+--# filter
+
+:type filter
+filter odd [2,4,1,3,6,8,5,7]
+
+--# Data.List
+:module +Data.List
+
+--# isPrefixOf
+
+:module +Data.List
+:type isPrefixOf
+"foo" `isPrefixOf` "foobar"
+[1,2] `isPrefixOf` []
+
+--# isInfixOf
+
+:module +Data.List
+[2,6] `isInfixOf` [3,1,4,1,5,9,2,6,5,3,5,8,9,7,9]
+"funk" `isInfixOf` "sonic youth"
+
+--# isSuffixOf
+
+:module +Data.List
+".c" `isSuffixOf` "crashme.c"
+
+--# zip
+
+:type zip
+zip [12,72,93] "zippity"
+
+--# zipWith
+
+:type zipWith
+zipWith (+) [1,2,3] [4,5,6]
+
+--# unlines
+
+lines "foo\nbar"
+unlines ["foo", "bar"]
+
+--# words.unwords
+
+words "the  \r  quick \t  brown\n\n\nfox"
+unwords ["jumps", "over", "the", "lazy", "dog"]
+
+--# dropWhile
+
+:type dropWhile
+
+--# dropWhile.isSpace
+
+:module +Data.Char
+:type dropWhile isSpace
+
+--# dropWhile.isSpace.use
+
+map (dropWhile isSpace) [" a","f","   e"]
+
+--# zip3
+
+:type zip3
+zip3 "foo" "bar" "quux"
+
+--# zip3foo
+
+:type zip3 "foo"
+let zip3foo = zip3 "foo"
+:type zip3foo
+(zip3 "foo") "aaa" "bbb"
+zip3foo "aaa" "bbb"
+zip3foo [1,2,3] [True,False,True]
+
+--# zip3foobar
+
+let zip3foobar = zip3 "foo" "bar"
+:type zip3foobar
+zip3foobar "quux"
+zip3foobar [1,2]

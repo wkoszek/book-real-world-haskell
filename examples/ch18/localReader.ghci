@@ -1,0 +1,4 @@
+:load LocalReader
+
+--# localExample
+runReader localExample "Fred"

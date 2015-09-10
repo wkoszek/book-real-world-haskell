@@ -1,0 +1,24 @@
+:load ApplicativeParsec
+
+--# simple
+parseTest (string "HTTP") "HTTP"
+parseTest (string "HTTP") "HTML"
+
+--# broken
+parseTest (string "HTTP" <|> string "HTML") "HTTP"
+
+--# fail
+parseTest (string "HTTP" <|> string "HTML") "HTML"
+
+--# try
+parseTest (try (string "HTTP") <|> string "HTML") "HTTP"
+parseTest (try (string "HTTP") <|> string "HTML") "HTML"
+
+--# factor
+
+let parser = (++) <$> string "HT" <*> (string "TP" <|> string "ML")
+parseTest parser "HTTP"
+parseTest parser "HTML"
+
+--# error
+parseTest parser "HTXY"

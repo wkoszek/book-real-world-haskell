@@ -1,0 +1,17 @@
+:m +System.Directory
+removeFile "poddbtest.db"
+:load PodDB
+connect undefined
+
+--# all
+:load PodDB.hs
+dbh <- connect "poddbtest.db"
+:type dbh
+getTables dbh
+let url = "http://feeds.thisamericanlife.org/talpodcast"
+pc <- addPodcast dbh (Podcast {castId=0, castURL=url})
+getPodcasts dbh
+addEpisode dbh (Episode {epId = 0, epCast = pc, epURL = "http://www.example.com/foo.mp3", epDone = False})
+getPodcastEpisodes dbh pc
+commit dbh
+disconnect dbh

@@ -1,0 +1,32 @@
+--# type
+:m +Data.Array
+:type listArray
+
+--# chars
+listArray (0,2) "foo"
+
+--# listArray
+listArray (0,3) [True,False,False,True,False]
+listArray (0,10) "too short"
+
+--# index
+let a = listArray (0,14) ['a'..]
+a ! 2
+a ! 100
+
+--# bounds
+let a = listArray (-9,5) ['a'..]
+a ! (-2)
+
+--# char
+let a = listArray ('a', 'h') [97..]
+a ! 'e'
+
+--# 3d
+let a = listArray ((0,0,0), (9,9,9)) [0..]
+a ! (4,3,7)
+
+--# lazy
+let a = listArray (0,5) "bar"
+a ! 2
+a ! 4

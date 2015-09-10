@@ -1,0 +1,3 @@
+--# load
+:load GoodIndent.hs
+:load BadIndent.hs

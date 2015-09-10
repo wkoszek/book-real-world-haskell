@@ -1,0 +1,11 @@
+:load Roygbiv
+
+--# using
+:type Yellow
+:type Red
+Red == Yellow
+Green == Green
+
+--# types
+take 3 "foobar"
+take Red "foobar"

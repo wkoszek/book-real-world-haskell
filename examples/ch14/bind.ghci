@@ -1,0 +1,8 @@
+--# print
+:type print "foo"
+
+--# bind
+print "foo" >>= \_ -> print "bar"
+
+--# bind_
+print "baz" >> print "quux"

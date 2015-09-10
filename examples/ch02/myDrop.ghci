@@ -1,0 +1,85 @@
+--# drop
+
+drop 2 "foobar"
+drop 4 "foobar"
+drop 4 [1,2]
+drop 0 [1,2]
+drop 7 []
+drop (-2) "foo"
+
+--# myDrop
+
+:load myDrop.hs
+
+myDrop 2 "foobar"
+myDrop 4 "foobar"
+myDrop 4 [1,2]
+myDrop 0 [1,2]
+myDrop 7 []
+myDrop (-2) "foo"
+
+--# myDrop1
+:type  2 <= 0 || null "abcd"
+
+--# myDrop2
+2 <= 0
+
+--# myDrop2a
+:type  False || null "abcd"
+
+--# myDrop3
+null "abcd"
+
+--# myDrop4
+False || False
+
+--# myDrop5
+:type (2 - 1) <= 0 || null (tail "abcd")
+
+--# myDrop6
+:type (2 - 1) <= 0
+2 - 1
+1 <= 0
+
+--# myDrop7
+:type null (tail "abcd")
+tail "abcd"
+null "bcd"
+
+--# myDrop8
+False || False
+
+--# myDrop9
+:type (1 - 1) <= 0 || null (tail "bcd")
+
+--# myDrop10
+:type (1 - 1) <= 0
+1 - 1
+0 <= 0
+
+--# myDrop11
+True || null (tail "bcd")
+
+--# myDrop12
+:type tail "bcd"
+
+--# myDrop13
+myDrop (1 - 1) (tail "bcd") == tail "bcd"
+
+--# myDrop14
+myDrop (2 - 1) (tail "abcd") == tail "bcd"
+
+--# myDrop15
+myDrop 2 "abcd" == tail "bcd"
+
+--# myDrop16
+myDrop 2 "abcd"
+tail "bcd"
+
+--# null
+
+:type null
+:type (||)
+
+--# print
+print (myDrop 2 "abcd")

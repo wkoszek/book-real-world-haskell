@@ -1,0 +1,3 @@
+--# MonadTrans
+:m +Control.Monad.Trans
+:info MonadTrans

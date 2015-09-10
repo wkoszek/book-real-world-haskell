@@ -1,0 +1,10 @@
+--# join
+:m +Control.Monad
+:t join
+
+--# updateLookupWithKey
+:m +Data.Map
+:t updateLookupWithKey
+
+--#
+:load NiceFork

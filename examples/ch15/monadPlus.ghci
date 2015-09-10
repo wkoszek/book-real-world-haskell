@@ -1,0 +1,9 @@
+:m +Control.Monad
+
+--# list.mplus
+
+[1,2,3] `mplus` [4,5,6]
+
+--# maybe.mplus
+
+Just 1 `mplus` Just 2

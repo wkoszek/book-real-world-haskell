@@ -1,0 +1,37 @@
+--# prettyshow
+:l num.hs
+5 + 1 * 3
+prettyShow $ 5 + 1 * 3
+prettyShow $ 5 * 1 + 3
+--# simplify
+prettyShow $ simplify $ 5 + 1 * 3
+--# rpnshow
+rpnShow $ 5 + 1 * 3
+rpnShow $ simplify $ 5 + 1 * 3
+--# symbols
+prettyShow $ 5 + (Symbol "x") * 3
+--# units
+5 / 2
+(units 5 "m") / (units 2 "s")
+(units 5 "m") + (units 2 "s")
+(units 5 "m") + (units 2 "m")
+(units 5 "m") / 2
+10 * (units 5 "m") / (units 2 "s")
+--# trig
+sin (pi / 2)
+sin (units (pi / 2) "rad")
+sin (units 90 "deg")
+(units 50 "m") * sin (units 90 "deg")
+--# func
+test
+rpnShow test
+prettyShow test
+test + 5
+prettyShow (test + 5)
+rpnShow (test + 5)
+--# final
+((units 50 "m") * sin (units 90 "deg")) :: Units (SymbolicManip Double)
+prettyShow $ dropUnits $ (units 50 "m") * sin (units 90 "deg")
+rpnShow $ dropUnits $ (units 50 "m") * sin (units 90 "deg")
+(units (Symbol "x") "m") * sin (units 90 "deg")
+

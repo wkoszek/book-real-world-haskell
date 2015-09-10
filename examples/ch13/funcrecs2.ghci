@@ -1,0 +1,9 @@
+--# all
+:l funcrecs2.hs
+:t plus5
+name plus5
+(calc plus5) 5
+(namedCalc plus5) 5
+let plus5a = plus5 {name = "PLUS5A"}
+name plus5a
+(namedCalc plus5a) 5

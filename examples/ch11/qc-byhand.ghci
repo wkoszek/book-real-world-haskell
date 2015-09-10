@@ -1,0 +1,8 @@
+:load QC-basics.hs
+prop_idempotent []       
+
+--# unit
+prop_idempotent []       
+prop_idempotent [1,1,1,1]  
+prop_idempotent [1..100]
+prop_idempotent [1,5,2,1,2,0,9]
