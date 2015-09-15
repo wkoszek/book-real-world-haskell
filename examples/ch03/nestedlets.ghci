@@ -1,7 +1,7 @@
 :load NestedLets
 
---# bar
+-- bar
 bar
 
---# quux
+-- quux
 :type quux

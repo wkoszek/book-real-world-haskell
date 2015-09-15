@@ -1,23 +1,23 @@
---# simple
+-- simple
 :load Supply
 runSupply next [1,2,3]
 runSupply (liftM2 (,) next next) [1,2,3]
 runSupply (liftM2 (,) next next) [1]
 
---# browse
+-- browse
 :browse Supply
 :info Supply
 
---#
+--
 :load SupplyInstance
 
---# instance
+-- instance
 runReader (ask >>= \x -> return (x * 3)) 2
 
---# xy1
+-- xy1
 (fst . runSupply xy) `fmap` randomsIO
 (fst . runSupply xy) `fmap` randomsIO
 
---# xy2
+-- xy2
 runMS xy 2
 runMS xy 2

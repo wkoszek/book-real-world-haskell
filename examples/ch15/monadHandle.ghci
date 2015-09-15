@@ -1,12 +1,12 @@
 :load MonadHandleIO
 
---# IO
+-- IO
 safeHello "hello to my fans in domestic surveillance"
 removeFile "hello to my fans in domestic surveillance"
 
---# combined
+-- combined
 tidyHello "much nicer"
 
---# Writer
+-- Writer
 :load WriterIO
 runWriterIO (safeHello "foo")

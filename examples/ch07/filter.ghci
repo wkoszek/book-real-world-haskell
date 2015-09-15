@@ -1,4 +1,4 @@
---# all
+-- all
 :type lines
 :type unlines
 :type elem

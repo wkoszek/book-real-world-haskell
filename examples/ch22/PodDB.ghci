@@ -3,7 +3,7 @@ removeFile "poddbtest.db"
 :load PodDB
 connect undefined
 
---# all
+-- all
 :load PodDB.hs
 dbh <- connect "poddbtest.db"
 :type dbh

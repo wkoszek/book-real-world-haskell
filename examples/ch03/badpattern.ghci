@@ -1,8 +1,8 @@
 :load BadPattern
 
---# error
+-- error
 badExample []
 
---# ok
+-- ok
 goodExample []
 goodExample [1,2]

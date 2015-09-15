@@ -1,9 +1,9 @@
 :load MTComposition
 
---# problem
+-- problem
 runWriterT a
 runWriter $ runMaybeT b
 
---# runWriterT
+-- runWriterT
 :t runWriterT
 :t runWriter . runMaybeT

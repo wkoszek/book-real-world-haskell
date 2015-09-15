@@ -1,4 +1,4 @@
---# all
+-- all
 :l funcrecs.hs
 :t plus5
 name plus5

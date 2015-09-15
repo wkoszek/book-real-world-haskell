@@ -1,4 +1,4 @@
---# all
+-- all
 :load RunProcessSimple.hs
 runIO $ ("pwd", []::[String])
 runIO $ ("ls", ["/usr"])

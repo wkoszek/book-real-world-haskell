@@ -1,10 +1,10 @@
---# join
+-- join
 :m +System.FilePath
 "foo" </> "bar"
 
---# dropTrailingPathSeparator
+-- dropTrailingPathSeparator
 dropTrailingPathSeparator "foo/"
 
---# splitFileName
+-- splitFileName
 splitFileName "foo/bar/Quux.hs"
 splitFileName "zippity"

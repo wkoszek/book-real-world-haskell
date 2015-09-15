@@ -1,9 +1,9 @@
 :load Map.hs
 
---# type
+-- type
 :type map
 
---# inuse
+-- inuse
 :module +Data.Char
 
 map toLower "SHOUTING"

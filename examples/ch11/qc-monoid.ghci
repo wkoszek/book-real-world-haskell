@@ -1,5 +1,5 @@
 :load QC.hs
 quickCheck prop_mempty_id
 
---# monoid_prop
+-- monoid_prop
 quickCheck prop_mempty_id

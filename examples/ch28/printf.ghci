@@ -1,8 +1,8 @@
---# printf
+-- printf
 :m +Text.Printf
 printf "%d and %d\n" (3::Int)
 printf "%s and %d\n" "foo" (3::Int)
 
---# forever
+-- forever
 :m +Control.Monad
 :type forever

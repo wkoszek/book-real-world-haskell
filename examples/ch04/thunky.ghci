@@ -1,13 +1,13 @@
---# sum
+-- sum
 foldl (+) 0 [1..1000]
 
---# overflow
+-- overflow
 foldl (+) 0 [1..1000000]
 
---# strict
+-- strict
 foldl  (+) 0 [1..1000000]
 :module +Data.List
 foldl' (+) 0 [1..1000000]
 
---# seq
+-- seq
 :type seq

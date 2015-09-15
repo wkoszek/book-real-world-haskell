@@ -2,11 +2,11 @@
 :m +Control.Monad.Writer
 null `liftM` execWriterT (countEntries "..")
 
---# runWriterT
+-- runWriterT
 :type runWriterT
 :type execWriterT
 
---# countEntries
+-- countEntries
 :type countEntries ".."
 :type execWriterT (countEntries "..")
 take 4 `liftM` execWriterT (countEntries "..")

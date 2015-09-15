@@ -1,9 +1,9 @@
---# head
+-- head
 
 head [1,2,3,4]
 head ['a','b','c']
 
---# tail
+-- tail
 
 tail [1,2,3,4]
 tail [2,3,4]
@@ -11,63 +11,63 @@ tail [True,False]
 tail "list"
 tail []
 
---# takeDrop
+-- takeDrop
 
 take 2 [1,2,3,4,5]
 drop 3 [1,2,3,4,5]
 
---# lines.type
+-- lines.type
 
 :type lines
 
---# lines
+-- lines
 
 lines "the quick\nbrown fox\njumps"
 
---# take.type
+-- take.type
 
 :type take
 
---# headDrop
+-- headDrop
 
 head (drop 4 "azerty")
 
---# last
+-- last
 
 last [1,2,3,4,5]
 last "baz"
 
---# last.type
+-- last.type
 
 :type last
 
---# not.type
+-- not.type
 
 :type not
 
---# fst.type
+-- fst.type
 
 :type fst
 
---# odd
+-- odd
 
 odd 3
 odd 6
 
---# compare
+-- compare
 
 compare 2 3
 compare 3 3
 compare 3 2
 
---# precedence
+-- precedence
 
 (compare 2 3) == LT
 compare 2 3 == LT
 
---# precedence2
+-- precedence2
 
 compare (sqrt 3) (sqrt 6)
 
---# precedence3
+-- precedence3
 compare sqrt 3 sqrt 6

@@ -1,6 +1,6 @@
 :load Lambda
 
---# unsafeHead
+-- unsafeHead
 
 :type unsafeHead
 unsafeHead [1]

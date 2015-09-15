@@ -1,16 +1,16 @@
 :m +Control.Monad
 :load FormApp
 
---# hexDigit
+-- hexDigit
 :type hexDigit
 
---# char
+-- char
 :type char '%' *> hexDigit
 
---# func
+-- func
 :type hexify <$> (char '%' *> hexDigit)
 
---# ap
+-- ap
 :type ($)
 :type (<*>)
 :type ap

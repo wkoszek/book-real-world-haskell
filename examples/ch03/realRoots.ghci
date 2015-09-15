@@ -1,12 +1,12 @@
---# a0
+-- a0
 
 :load Roots
 realRoots 0 1 2
 
---# complex
+-- complex
 
 realRoots 1 3 4
 
---# just
+-- just
 
 realRoots 1 3 2

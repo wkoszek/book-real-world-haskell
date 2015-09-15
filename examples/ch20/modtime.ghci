@@ -1,3 +1,3 @@
---# all
+-- all
 :module System.Directory
 getModificationTime "/etc/passwd"

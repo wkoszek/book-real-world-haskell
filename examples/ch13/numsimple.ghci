@@ -1,4 +1,4 @@
---# all
+-- all
 :l numsimple.hs
 Number 5
 :t Number 5

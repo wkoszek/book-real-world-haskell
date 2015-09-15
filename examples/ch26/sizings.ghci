@@ -2,10 +2,10 @@
 -- source directory
 :cd /tmp
 
---# kbytes
+-- kbytes
 let kbytes (bits,hashes) = (ceiling bits `div` 8192, hashes)
 :m +BloomFilter.Easy Data.List
 mapM_ (print . kbytes) . take 10 . sort $ sizings 10000000 0.001
 
---# kbytes2
+-- kbytes2
 mapM_ (print . kbytes) . take 10 . sort $ sizings 10000000 0.01

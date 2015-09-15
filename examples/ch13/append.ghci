@@ -1,12 +1,12 @@
---# info
+-- info
 :info (++)
 
---# section
+-- section
 :type ("a" ++)
 
---# compose
+-- compose
 :type ("a" ++) . ("b" ++)
 
---# apply
+-- apply
 let f = ("a" ++) . ("b" ++)
 f []

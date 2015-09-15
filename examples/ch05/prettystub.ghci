@@ -1,6 +1,6 @@
 :load PrettyStub
 
---# crash
+-- crash
 :type undefined
 undefined
 :type double

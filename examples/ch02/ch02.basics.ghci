@@ -1,13 +1,13 @@
---# error
+-- error
 
 True && "false"
 
---# types
+-- types
 
 :type 'a'
 'a' :: Char
 [1,2,3] :: Int
 
---# readFile
+-- readFile
 
 :type readFile

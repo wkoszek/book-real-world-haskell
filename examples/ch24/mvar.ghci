@@ -1,19 +1,19 @@
 :m +Control.Concurrent
 
---# MVar
+-- MVar
 :t putMVar
 :t takeMVar
 
---# new
+-- new
 :t newEmptyMVar
 :t newMVar
 
---# communicate
+-- communicate
 :load MVarExample
 communicate
 
---# modifyMVar
+-- modifyMVar
 :t modifyMVar
 
---# tryTakeMVar
+-- tryTakeMVar
 :t tryTakeMVar

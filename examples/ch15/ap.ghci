@@ -1,12 +1,12 @@
 :load MovieReview
 
---# ap
+-- ap
 :m +Control.Monad
 :type ap
 
---# MovieReview
+-- MovieReview
 :type MovieReview
 
---# types
+-- types
 :type ($)
 :type ap

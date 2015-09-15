@@ -1,24 +1,24 @@
 :load Plus
 
---# plus
+-- plus
 1 `plus` 2
 plus 1 2
 
 True `Pair` "something"
 Pair True "something"
---# type
+-- type
 :type elem
 
---# prefix
+-- prefix
 elem 'a' "camogie"
 
---# infix
+-- infix
 3 `elem` [1,2,4,8]
 
---# isPrefixOf
+-- isPrefixOf
 :module +Data.List
 "foo" `isPrefixOf` "foobar"
 
---# isInfixOf
+-- isInfixOf
 "needle" `isInfixOf` "haystack full of needle thingies"
 "end" `isSuffixOf` "the end"

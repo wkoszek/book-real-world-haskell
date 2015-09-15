@@ -1,22 +1,22 @@
 :load Partial
 
---# isInfixOf
+-- isInfixOf
 :type isInfixOf
 :type isInfixOf "foo"
 
---# section
+-- section
 (1+) 2
 map (*3) [24,36]
 map (2^) [3,5,7,9]
 
---# function
+-- function
 
 :type (`elem` ['a'..'z'])
 
---# lower.letter
+-- lower.letter
 
 (`elem` ['a'..'z']) 'f'
 
---# lower.string
+-- lower.string
 
 all (`elem` ['a'..'z']) "Frobozz"

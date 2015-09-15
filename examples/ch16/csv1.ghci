@@ -1,9 +1,9 @@
---# s1
+-- s1
 :l csv1.hs
 parseCSV ""
---# s2
+-- s2
 parseCSV "hi"
---# s3
+-- s3
 parseCSV "hi\n"
 parseCSV "line1\nline2\nline3\n"
 parseCSV "cell1,cell2,cell3\n"

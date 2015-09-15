@@ -1,59 +1,59 @@
 :load TreeMap
 
---# map
+-- map
 
 map (+1) [1,2,3]
 map show [1,2,3]
 :type map show
 
---# treeLengths
+-- treeLengths
 
 let tree = Node (Leaf "foo") (Node (Leaf "x") (Leaf "quux"))
 treeLengths tree
 treeMap length tree
 treeMap (odd . length) tree
 
---# fmap
+-- fmap
 
 fmap length ["foo","quux"]
 fmap length (Node (Leaf "Livingstone") (Leaf "I presume"))
 
---# id
+-- id
 
 fmap id (Node (Leaf "a") (Leaf "b"))
 
---# EitherInt
+-- EitherInt
 
 :load EitherInt
 
---# EitherIntFlexible
+-- EitherIntFlexible
 
 :load EitherIntFlexible
 fmap (== "cheeseburger") (Left 1 :: Either Int String)
 fmap (== "cheeseburger") (Right "fries" :: Either Int String)
 
---# shape
+-- shape
 
 fmap odd (Just 1)
 fmap odd Nothing
 
---# composition
+-- composition
 
 (fmap even . fmap length) (Just "twelve")
 fmap (even . length) (Just "twelve")
 
---# operator
+-- operator
 
 (1+) `fmap` [1,2,3] ++ [4,5,6]
 
---# prefix
+-- prefix
 
 fmap (1+) ([1,2,3] ++ [4,5,6])
 
---# applicative
+-- applicative
 
 :m +Control.Applicative
 (1+) <$> Just 2
 
---# invalid
+-- invalid
 :load ValidFunctor

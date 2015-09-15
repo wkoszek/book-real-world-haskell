@@ -1,4 +1,4 @@
---# maybe1
+-- maybe1
 Nothing
 :t Nothing
 Just "hi"
@@ -6,7 +6,7 @@ Just "hi"
 Nothing
 :t (Nothing :: Maybe [Char])
 
---# maybe2
+-- maybe2
 (Nothing::Maybe Int) == Nothing
 Nothing == Just "hi"
 Nothing == Just 123

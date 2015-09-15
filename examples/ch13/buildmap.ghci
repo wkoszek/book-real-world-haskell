@@ -1,4 +1,4 @@
---# all
+-- all
 :l buildmap.hs
 al
 mapFromAL

@@ -1,9 +1,9 @@
---# shell 
+-- shell 
 :load RunProcess.hs
 runIO $ ("ls", ["/etc"]) -|- ("grep", ["m.*ap"]) -|- ("tr", ["a-z", "A-Z"])
 runIO $ "ls /etc" -|- "grep 'm.*ap'" -|- "tr a-z A-Z"
 
---# hask
+-- hask
 runIO $ "ls /etc" -|- grep "m.*ap" -|- "tr a-z A-Z"
 run $ "ls /etc" -|- grep "m.*ap" -|- "tr a-z A-Z" :: IO String
 run $ "ls /etc" -|- grep "m.*ap" -|- "tr a-z A-Z" :: IO [String]

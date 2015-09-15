@@ -1,4 +1,4 @@
---# intersperse
+-- intersperse
 :load Intersperse
 intersperse ',' []
 intersperse ',' ["foo"]

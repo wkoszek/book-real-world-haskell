@@ -1,6 +1,6 @@
---# all
+-- all
 :type putStrLn
 :type getLine
---# putStrLn
+-- putStrLn
 let writefoo = putStrLn "foo"
 writefoo

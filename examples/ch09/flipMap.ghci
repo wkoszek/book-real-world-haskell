@@ -1,4 +1,4 @@
---# flipMap
+-- flipMap
 :m +Control.Monad
 :t mapM
 :t forM

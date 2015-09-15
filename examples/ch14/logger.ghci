@@ -1,24 +1,24 @@
 :load Logger
 
---# firstExample
+-- firstExample
 runLogger (globToRegex "foo*.[ch]")
 
---# bind.type
+-- bind.type
 :type (>>=)
 :type (globToRegex "" >>=)
 
---# simple
+-- simple
 let simple = return True :: Logger Bool
 runLogger simple
 
---# logged
+-- logged
 runLogger (record "hi mom!" >> return 3.1337)
 
---# m
+-- m
 let m = return "foo" :: Logger String
 
---# m.length
+-- m.length
 length m
 
---# m.length2
+-- m.length2
 :type   m >>= \s -> return (length s)

@@ -1,14 +1,14 @@
---# setdir
+-- setdir
 :module System.Directory
 setCurrentDirectory "/etc"
 getCurrentDirectory
 setCurrentDirectory ".."
 getCurrentDirectory
---# contents
+-- contents
 getDirectoryContents "/"
---# contents2
+-- contents2
 getDirectoryContents "/" >>= return . filter (`notElem` [".", ".."])
---# query
+-- query
 getHomeDirectory
 getAppUserDataDirectory "myApp"
 getUserDocumentsDirectory

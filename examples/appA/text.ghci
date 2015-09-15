@@ -1,22 +1,22 @@
---# char
+-- char
 
 'c'
 :type 'c'
 
---# string
+-- string
 
 "a string literal"
 :type "a string literal"
 
---# stringlist
+-- stringlist
 
 ['a', ' ', 's', 't', 'r', 'i', 'n', 'g'] == "a string"
 
---# empty
+-- empty
 
 "\&"
 "foo\&bar"
 
---# empty.example
+-- empty.example
 
 "\130\&11"

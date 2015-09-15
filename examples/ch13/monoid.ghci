@@ -1,12 +1,12 @@
 :load DList
 
---# mappend
+-- mappend
 "foo" `mappend` "bar"
 toList (fromList [1,2] `mappend` fromList [3,4])
 mempty `mappend` [1]
 
---#
+--
 :load Monoid
---# int
+-- int
 2 `mappend` 5 :: MInt
 2 `mappend` 5 :: AInt

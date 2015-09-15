@@ -1,9 +1,9 @@
---# type.handle
+-- type.handle
 
 :module +Control.Exception
 :type handle
 
---# type.const
+-- type.const
 
 :type const
 

@@ -1,4 +1,4 @@
---# tiny
+-- tiny
 
 :load GlobRegexTiny.hs
 
@@ -8,20 +8,20 @@ globToRegex ""
 
 globToRegex "**"
 
---# real
+-- real
 
 :load GlobRegex.hs
 :module +Text.Regex.Posix
 
 globToRegex "f??.c"
 
---# matches
+-- matches
 
 "foo.c" =~ globToRegex "f??.c" :: Bool
 "test.c" =~ globToRegex "t[ea]s*" :: Bool
 "taste.txt" =~ globToRegex "t[ea]s*" :: Bool
 
---# fnmatch
+-- fnmatch
 
 let fnmatch pat name  =  name =~ globToRegex pat :: Bool
 :type fnmatch

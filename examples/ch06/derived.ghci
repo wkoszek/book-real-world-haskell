@@ -1,5 +1,5 @@
 :load colorderived.hs
---# all
+-- all
 show Red
 (read "Red")::Color
 (read "[Red,Red,Blue]")::[Color]
