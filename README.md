@@ -11,3 +11,8 @@ the publishers website:
 MD5:
 
 	MD5 (rwh-examples2.zip) = 38b4bfd4cd67305ed9e43d3f0be5fd77
+
+# Author
+
+- Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
+- [http://www.koszek.com](http://www.koszek.com)
