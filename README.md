@@ -12,6 +12,11 @@ MD5:
 
 	MD5 (rwh-examples2.zip) = 38b4bfd4cd67305ed9e43d3f0be5fd77
 
+# Copyright
+
+The files in `examples/` hold the copyright of the RWC copyright. Consult O'Reilly website
+for more details. The other files hold BSD 2-clause copyright (inspect `COPYRIGHT.md`).
+
 # Author
 
 - Wojciech Adam Koszek, [wojciech@koszek.com](mailto:wojciech@koszek.com)
