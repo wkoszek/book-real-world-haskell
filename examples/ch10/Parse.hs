@@ -78,13 +78,14 @@ parse parser initState
         Left err          -> Left err
         Right (result, _) -> Right result
 {-- /snippet parse --}
-
+{--
 {-- snippet Monad --}
 instance Monad Parse where
     return = identity
     (>>=) = (==>)
     fail = bail
 {-- /snippet Monad --}
+--}
 
 {-- snippet getPut --}
 getState :: Parse ParseState
