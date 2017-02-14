@@ -79,12 +79,19 @@ parse parser initState
         Right (result, _) -> Right result
 {-- /snippet parse --}
 
+{-- Applicative Monad Proposal (AMP) restrictions
+Due to the AMP [1], the code below no longer compiles.
+Tested GHCi version 7.10.3.
+
+[1]: https://wiki.haskell.org/Functor-Applicative-Monad_Proposal
+
 {-- snippet Monad --}
 instance Monad Parse where
     return = identity
     (>>=) = (==>)
     fail = bail
 {-- /snippet Monad --}
+--}
 
 {-- snippet getPut --}
 getState :: Parse ParseState
