@@ -36,7 +36,7 @@ instance (Arbitrary a, Arbitrary b) => Arbitrary (a, b) where
 
 {-- snippet InstanceRec --}
 instance Arbitrary a => Arbitrary [a] where
-  arbitrary =
+  arbitrary = do
       n <- choose (0, 1) :: Gen Int
       if n == 0
          then []
