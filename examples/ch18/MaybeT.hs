@@ -45,6 +45,15 @@ returnMT a = MaybeT $ return (Just a)
 failMT :: (Monad m) => t -> MaybeT m a
 failMT _ = MaybeT $ return Nothing
  
+instance Monad m => Applicative (MaybeT m) where
+  pure = returnMT
+  (<*>) a b = MaybeT $ do
+    a' <- runMaybeT a
+    case a' of Nothing -> return Nothing
+               Just a'' -> do b' <- runMaybeT b
+                              case b' of Nothing -> return Nothing
+                                         Just b'' -> return $ Just $ a'' b''
+
 instance (Monad m) => Monad (MaybeT m) where
   return = returnMT
   (>>=) = bindMT
