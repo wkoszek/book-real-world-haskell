@@ -57,7 +57,7 @@ constrainedCount curDepth path = do
 {-- snippet MyApp --}
 newtype MyApp a = MyA {
       runA :: ReaderT AppConfig (StateT AppState IO) a
-    } deriving (Monad, MonadIO, MonadReader AppConfig,
+    } deriving (Functor, Applicative, Monad, MonadIO, MonadReader AppConfig,
                 MonadState AppState)
 
 runMyApp :: MyApp a -> Int -> IO (a, AppState)
